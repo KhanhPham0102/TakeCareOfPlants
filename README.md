@@ -46,6 +46,6 @@
 
  ## QUICK START
 
- - Báo cáo đồ án: [Report](https://github.com/KhanhPham0102/TakeCareOfPlants/blob/master/Bao_Cao_Do_An.docx)
+ - Báo cáo đồ án: [Report](https://github.com/KhanhPham0102/TakeCareOfPlants/blob/master/REPROT.docx)
  - Source Code: [project_code](https://github.com/KhanhPham0102/TakeCareOfPlants/tree/master/TakeCareOfPlants)
  - Database: [database](https://github.com/KhanhPham0102/TakeCareOfPlants/blob/master/NEWDB.sql)
