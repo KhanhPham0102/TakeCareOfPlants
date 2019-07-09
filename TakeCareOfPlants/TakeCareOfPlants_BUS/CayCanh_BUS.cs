@@ -29,6 +29,26 @@ namespace TakeCareOfPlants_BUS
             }
         }
 
+        public void UpdateValueCayCanhWithId(string idCay,
+                                             string name,
+                                             string idViTri,
+                                             string idLoai,
+                                             string idTinhTrang,
+                                             DateTime dateTime)
+        {
+            ViTri_DTO viTri_DTO = viTriSQL.GetAllDataViTri().Find(r => r.Id == idViTri);
+
+            if ((viTri_DTO.SoCayCoSan + 1) <= viTri_DTO.SoCayToiDa) {
+                try {
+                    cayCanhSQL.UpdateDataCayCanh(idCay, name, idViTri, idLoai, idTinhTrang, dateTime);
+                } catch (Exception ex) {
+                    throw new Exception(ex.Message);
+                }
+            } else {
+                throw new Exception("The Location Is Full");
+            }
+        }
+
         public string LastIDCayCanh() => cayCanhSQL.GetLastIDCayCanh();
 
         public DataTable GetAllValueCayCanh() => cayCanhSQL.GetAllDataCayCanh();
@@ -44,5 +64,7 @@ namespace TakeCareOfPlants_BUS
         public List<TinhTrang_DTO> GetValueTinhTrang() => tinhTrangSQL.GetDataTinhTrang();
 
         public List<Tuple<CayCanh_DTO, ViTri_DTO>> GetValueCayCanhViTri() => cayCanhSQL.GetDataCayCanhViTri();
+
+        public void DeleteValueCayCanh(string id) => cayCanhSQL.DeleteDataCayCanh(id);
     }
 }

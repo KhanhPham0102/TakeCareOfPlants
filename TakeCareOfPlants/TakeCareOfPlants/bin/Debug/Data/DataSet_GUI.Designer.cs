@@ -1008,7 +1008,7 @@ namespace TakeCareOfPlants.Data {
             
             private global::System.Data.DataColumn columnVật_Tư;
             
-            private global::System.Data.DataColumn columnSố_Lượng;
+            private global::System.Data.DataColumn columnSố_Phiếu_Mua;
             
             private global::System.Data.DataColumn columnTổng_Giá_Trị;
             
@@ -1065,9 +1065,9 @@ namespace TakeCareOfPlants.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Số_LượngColumn {
+            public global::System.Data.DataColumn Số_Phiếu_MuaColumn {
                 get {
-                    return this.columnSố_Lượng;
+                    return this.columnSố_Phiếu_Mua;
                 }
             }
             
@@ -1124,12 +1124,12 @@ namespace TakeCareOfPlants.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ReportCareCostRow AddReportCareCostRow(string STT, string Vật_Tư, string Số_Lượng, string Tổng_Giá_Trị, string Tỉ_Lệ) {
+            public ReportCareCostRow AddReportCareCostRow(string STT, string Vật_Tư, string Số_Phiếu_Mua, string Tổng_Giá_Trị, string Tỉ_Lệ) {
                 ReportCareCostRow rowReportCareCostRow = ((ReportCareCostRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         STT,
                         Vật_Tư,
-                        Số_Lượng,
+                        Số_Phiếu_Mua,
                         Tổng_Giá_Trị,
                         Tỉ_Lệ};
                 rowReportCareCostRow.ItemArray = columnValuesArray;
@@ -1156,7 +1156,7 @@ namespace TakeCareOfPlants.Data {
             internal void InitVars() {
                 this.columnSTT = base.Columns["STT"];
                 this.columnVật_Tư = base.Columns["Vật_Tư"];
-                this.columnSố_Lượng = base.Columns["Số_Lượng"];
+                this.columnSố_Phiếu_Mua = base.Columns["Số_Phiếu_Mua"];
                 this.columnTổng_Giá_Trị = base.Columns["Tổng_Giá_Trị"];
                 this.columnTỉ_Lệ = base.Columns["Tỉ_Lệ"];
             }
@@ -1168,8 +1168,8 @@ namespace TakeCareOfPlants.Data {
                 base.Columns.Add(this.columnSTT);
                 this.columnVật_Tư = new global::System.Data.DataColumn("Vật_Tư", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnVật_Tư);
-                this.columnSố_Lượng = new global::System.Data.DataColumn("Số_Lượng", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSố_Lượng);
+                this.columnSố_Phiếu_Mua = new global::System.Data.DataColumn("Số_Phiếu_Mua", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSố_Phiếu_Mua);
                 this.columnTổng_Giá_Trị = new global::System.Data.DataColumn("Tổng_Giá_Trị", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTổng_Giá_Trị);
                 this.columnTỉ_Lệ = new global::System.Data.DataColumn("Tỉ_Lệ", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1989,17 +1989,17 @@ namespace TakeCareOfPlants.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Số_Lượng {
+            public string Số_Phiếu_Mua {
                 get {
                     try {
-                        return ((string)(this[this.tableReportCareCost.Số_LượngColumn]));
+                        return ((string)(this[this.tableReportCareCost.Số_Phiếu_MuaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Số_Lượng\' in table \'ReportCareCost\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Số_Phiếu_Mua\' in table \'ReportCareCost\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableReportCareCost.Số_LượngColumn] = value;
+                    this[this.tableReportCareCost.Số_Phiếu_MuaColumn] = value;
                 }
             }
             
@@ -2061,14 +2061,14 @@ namespace TakeCareOfPlants.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsSố_LượngNull() {
-                return this.IsNull(this.tableReportCareCost.Số_LượngColumn);
+            public bool IsSố_Phiếu_MuaNull() {
+                return this.IsNull(this.tableReportCareCost.Số_Phiếu_MuaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetSố_LượngNull() {
-                this[this.tableReportCareCost.Số_LượngColumn] = global::System.Convert.DBNull;
+            public void SetSố_Phiếu_MuaNull() {
+                this[this.tableReportCareCost.Số_Phiếu_MuaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

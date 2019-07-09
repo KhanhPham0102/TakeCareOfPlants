@@ -36,5 +36,7 @@ namespace TakeCareOfPlants_BUS
         public List<Lich_DTO> GetListLich() => lich_SQL.GetDataLich();
 
         public List<Tuple<Lich_DTO, TimeSpan, string, string, int, string>> GetValueLich() => lich_SQL.GetDataLichThoiGianVatTu();
+
+        public void DeleteValueThoiGian(string id) => thoiGianSQL.DeleteDataThoiGian(id);
     }
 }

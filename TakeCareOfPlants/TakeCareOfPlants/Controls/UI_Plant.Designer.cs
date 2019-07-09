@@ -28,11 +28,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Name_Plant_Title = new System.Windows.Forms.Label();
             this.Type_Of_Plant_Title = new System.Windows.Forms.Label();
             this.Planting_Location_Title = new System.Windows.Forms.Label();
@@ -40,7 +40,7 @@
             this.Name_Plant_Text = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.Type_Of_Plant_ComboBox = new Bunifu.Framework.UI.BunifuDropdown();
             this.Planing_Data_DateTime = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Divider_Panel = new System.Windows.Forms.Panel();
             this.List_Plant_Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.List_Plant_DataGrid = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +59,8 @@
             this.Update_Plant_Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Clear_Button = new System.Windows.Forms.Button();
             this.Clear_Plant_Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.Delete_Button = new System.Windows.Forms.Button();
+            this.Delete_Button_Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.List_Plant_DataGrid)).BeginInit();
             this.List_Plant_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -188,15 +190,15 @@
             this.Planing_Data_DateTime.TabStop = false;
             this.Planing_Data_DateTime.Value = new System.DateTime(2019, 5, 21, 16, 49, 1, 766);
             // 
-            // panel1
+            // Divider_Panel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.Divider_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.panel1.Location = new System.Drawing.Point(54, 108);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 3);
-            this.panel1.TabIndex = 19;
+            this.Divider_Panel.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Divider_Panel.Location = new System.Drawing.Point(54, 108);
+            this.Divider_Panel.Name = "Divider_Panel";
+            this.Divider_Panel.Size = new System.Drawing.Size(357, 3);
+            this.Divider_Panel.TabIndex = 19;
             // 
             // List_Plant_Elipse
             // 
@@ -207,8 +209,8 @@
             // 
             this.List_Plant_DataGrid.AllowUserToAddRows = false;
             this.List_Plant_DataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.List_Plant_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.List_Plant_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.List_Plant_DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.List_Plant_DataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -216,14 +218,14 @@
             this.List_Plant_DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.List_Plant_DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.List_Plant_DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.List_Plant_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.List_Plant_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.List_Plant_DataGrid.ColumnHeadersHeight = 30;
             this.List_Plant_DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -232,31 +234,32 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.List_Plant_DataGrid.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.List_Plant_DataGrid.DefaultCellStyle = dataGridViewCellStyle14;
             this.List_Plant_DataGrid.DoubleBuffered = true;
             this.List_Plant_DataGrid.EnableHeadersVisualStyles = false;
             this.List_Plant_DataGrid.HeaderBgColor = System.Drawing.Color.DeepSkyBlue;
             this.List_Plant_DataGrid.HeaderForeColor = System.Drawing.Color.White;
             this.List_Plant_DataGrid.ImeMode = System.Windows.Forms.ImeMode.On;
             this.List_Plant_DataGrid.Location = new System.Drawing.Point(0, 0);
+            this.List_Plant_DataGrid.MultiSelect = false;
             this.List_Plant_DataGrid.Name = "List_Plant_DataGrid";
             this.List_Plant_DataGrid.ReadOnly = true;
             this.List_Plant_DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Turquoise;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.List_Plant_DataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Turquoise;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.List_Plant_DataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.List_Plant_DataGrid.RowHeadersVisible = false;
             this.List_Plant_DataGrid.RowHeadersWidth = 51;
             this.List_Plant_DataGrid.RowTemplate.DividerHeight = 1;
@@ -271,8 +274,8 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column1.FillWeight = 30F;
             this.Column1.Frozen = true;
             this.Column1.HeaderText = "STT";
@@ -436,6 +439,7 @@
             this.Update_Button.TabStop = false;
             this.Update_Button.Text = "Update Plant";
             this.Update_Button.UseVisualStyleBackColor = false;
+            this.Update_Button.Click += new System.EventHandler(this.Update_Button_Click);
             // 
             // Update_Plant_Elipse
             // 
@@ -466,18 +470,43 @@
             this.Clear_Plant_Elipse.ElipseRadius = 20;
             this.Clear_Plant_Elipse.TargetControl = this.Clear_Button;
             // 
+            // Delete_Button
+            // 
+            this.Delete_Button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Delete_Button.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Delete_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delete_Button.FlatAppearance.BorderSize = 0;
+            this.Delete_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Delete_Button.ForeColor = System.Drawing.Color.White;
+            this.Delete_Button.Location = new System.Drawing.Point(1046, 508);
+            this.Delete_Button.Name = "Delete_Button";
+            this.Delete_Button.Size = new System.Drawing.Size(135, 44);
+            this.Delete_Button.TabIndex = 27;
+            this.Delete_Button.TabStop = false;
+            this.Delete_Button.Text = "Delete Plant";
+            this.Delete_Button.UseVisualStyleBackColor = false;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
+            // 
+            // Delete_Button_Elipse
+            // 
+            this.Delete_Button_Elipse.ElipseRadius = 20;
+            this.Delete_Button_Elipse.TargetControl = this.Delete_Button;
+            // 
             // UI_Plant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Delete_Button);
             this.Controls.Add(this.Clear_Button);
             this.Controls.Add(this.Update_Button);
             this.Controls.Add(this.Status_ComboBox);
             this.Controls.Add(this.Status_Title);
             this.Controls.Add(this.Create_Button);
             this.Controls.Add(this.List_Plant_Panel);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Divider_Panel);
             this.Controls.Add(this.Planting_Location_ComboBox);
             this.Controls.Add(this.Planing_Data_DateTime);
             this.Controls.Add(this.Type_Of_Plant_ComboBox);
@@ -505,7 +534,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox Name_Plant_Text;
         private Bunifu.Framework.UI.BunifuDropdown Type_Of_Plant_ComboBox;
         private Bunifu.Framework.UI.BunifuDatepicker Planing_Data_DateTime;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Divider_Panel;
         private Bunifu.Framework.UI.BunifuElipse List_Plant_Elipse;
         private System.Windows.Forms.Button Create_Button;
         private Bunifu.Framework.UI.BunifuElipse Create_Button_Elipse;
@@ -524,5 +553,7 @@
         private Bunifu.Framework.UI.BunifuElipse Update_Plant_Elipse;
         private System.Windows.Forms.Button Clear_Button;
         private Bunifu.Framework.UI.BunifuElipse Clear_Plant_Elipse;
+        private System.Windows.Forms.Button Delete_Button;
+        private Bunifu.Framework.UI.BunifuElipse Delete_Button_Elipse;
     }
 }

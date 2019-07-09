@@ -38,7 +38,8 @@ namespace TakeCareOfPlants
             pageSetting = this;
             NumberPlant_DropDown.Items.Clear();
 
-            list_ViTri_DTO = GlobalVariable_DTO.ViTri_DTOs;
+            list_ViTri_DTO = QuyDinh_BUS.GetAvailableViTri();
+            ;
 
             foreach (ViTri_DTO viTriDTO in list_ViTri_DTO) {
                 NumberPlant_DropDown.Items.Add(viTriDTO.TenViTri);
@@ -56,6 +57,8 @@ namespace TakeCareOfPlants
 
         private void Save_Button_Click(object sender, EventArgs e)
         {
+            QuyDinh_DTO quyDinh_DTO = GlobalVariable_DTO.QuyDinh_DTOs[1];
+
             if (ValidateChildren(ValidationConstraints.Enabled)) {
                 switch (MessageBox.Show(
                         "Are you sure you want to Save?",
@@ -66,14 +69,15 @@ namespace TakeCareOfPlants
                             try {
                                 GlobalVariable_DTO.QuyDinh_DTOs[1] = new QuyDinh_DTO {
                                     SoLoaiVatTu = int.Parse(TypeMaterial_Text.Text),
-                                    SoTienToiDa = (long)decimal.Parse(
-                                        AmountMoney_Text.Text,
-                                        NumberStyles.Currency)
+                                    SoTienToiDa = (long)decimal.Parse(s: AmountMoney_Text.Text,
+                                                                      style: NumberStyles.Currency)
                                 };
 
                                 QuyDinh_BUS.UpdateValueQuyDinh(list_ViTri_DTO);
+
                                 DialogSuccess_GUI.Instance.ShowDialog();
                             } catch (Exception ex) {
+                                GlobalVariable_DTO.QuyDinh_DTOs[1] = quyDinh_DTO;
                                 Function_GUI.ShowErrorDialog(ex.Message);
                             }
                             break;
@@ -168,6 +172,7 @@ namespace TakeCareOfPlants
         {
             if (NumberPlant_Text.Text != "") {
                 list_ViTri_DTO[NumberPlant_DropDown.SelectedIndex].SoCayToiDa = int.Parse(NumberPlant_Text.Text);
+                maxPlant[NumberPlant_DropDown.SelectedIndex] = int.Parse(NumberPlant_Text.Text);
             }
         }
 

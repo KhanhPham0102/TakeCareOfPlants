@@ -36,6 +36,12 @@ namespace TakeCareOfPlants.Reports
         {
             pageReportCalendar = this;
 
+            CayCanh_ComboBox.Items.Clear();
+            NgayLapLich_DropDown.Items.Clear();
+
+            CayCanh_ComboBox.Items.Add("- Select -");
+            NgayLapLich_DropDown.Items.Add("- Select -");
+
             try {
                 cayCanh_DTOs = cayCanhBUS.GetValueCayCanhViTri().Select(x => x.Item1).ToList();
                 lich_DTOs = lichBUS.GetListLich();

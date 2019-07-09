@@ -82,6 +82,7 @@ namespace TakeCareOfPlants
 
         private void Create_Button_Click(object sender, EventArgs e)
         {
+            PageMain_GUI.Instance.BackButton.Visible = true;
             PageMain_GUI.Instance.TitlePage.Text = "Calendar";
             UI_Calendar.Instance.Update();
 

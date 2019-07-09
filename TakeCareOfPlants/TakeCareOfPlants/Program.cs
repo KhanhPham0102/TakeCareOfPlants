@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using TakeCareOfPlants.Forms;
-using TakeCareOfPlants.Reports;
 
 namespace TakeCareOfPlants
 {
@@ -15,7 +13,7 @@ namespace TakeCareOfPlants
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ReportCostVsStatus_GUI());
+            Application.Run(new PageLogin_GUI());
         }
     }
 }

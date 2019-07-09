@@ -130,7 +130,7 @@ namespace TakeCareOfPlants_DAL
                 + "ON cc.IDLoai = lcc.ID "
                 + "INNER JOIN tinhtrang as tt "
                 + "ON cc.IDTinhTrang = tt.ID "
-                + "WHERE MONTH(cc.NgayTrong) = '"+ month + "';",
+                + "WHERE MONTH(cc.NgayTrong) = '" + month + "';",
                 databaseConnection.Connection);
 
             try {
@@ -167,6 +167,77 @@ namespace TakeCareOfPlants_DAL
 
                 command.CommandText = "INSERT INTO caycanh_vitri(IDCayCanh, IDViTri) VALUE ((SELECT MAX(ID) from caycanh), @idvt)";
                 command.Parameters.AddWithValue("@idvt", value: idViTri);
+                command.ExecuteNonQuery();
+                command.Dispose();
+
+                databaseConnection.CloseConnect();
+            } catch (Exception ex) {
+                command.Dispose();
+                databaseConnection.CloseConnect();
+                throw ex;
+            }
+        }
+
+        public void UpdateDataCayCanh(string idCay,
+                                      string name,
+                                      string idViTri,
+                                      string idLoai,
+                                      string idTinhTrang,
+                                      DateTime dateTime)
+        {
+            try {
+                databaseConnection.OpenConnect();
+
+                command = new MySqlCommand {
+                    Connection = databaseConnection.Connection,
+                    CommandText = "UPDATE caycanh "
+                    + "SET TenCay = @tc, IDLoai = @idl, IDTinhTrang = @idtt, NgayTrong = @nt "
+                    + "WHERE ID = @id;"
+                };
+                command.Parameters.AddWithValue("@id", idCay);
+                command.Parameters.AddWithValue("@tc", name);
+                command.Parameters.AddWithValue("@idl", idLoai);
+                command.Parameters.AddWithValue("@idtt", idTinhTrang);
+                command.Parameters.AddWithValue("@nt", dateTime.ToString("yyyy-MM-dd"));
+                command.ExecuteNonQuery();
+                command.Dispose();
+
+                command = new MySqlCommand {
+                    Connection = databaseConnection.Connection,
+                    CommandText = "UPDATE caycanh_vitri " +
+                    "SET IDViTri = @idvt WHERE IDCayCanh = @idcc;"
+                };
+                command.Parameters.AddWithValue("@idvt", idViTri);
+                command.Parameters.AddWithValue("@idcc", idCay);
+                command.ExecuteNonQuery();
+                command.Dispose();
+
+                databaseConnection.CloseConnect();
+            } catch (Exception ex) {
+                command.Dispose();
+                databaseConnection.CloseConnect();
+                throw ex;
+            }
+        }
+
+        public void DeleteDataCayCanh(string idCay)
+        {
+            try {
+                databaseConnection.OpenConnect();
+
+                command = new MySqlCommand {
+                    Connection = databaseConnection.Connection,
+                    CommandText = "DELETE FROM caycanh_vitri WHERE IDCayCanh = @idcc;"
+                };
+                command.Parameters.AddWithValue("@idcc", idCay);
+                command.ExecuteNonQuery();
+                command.Dispose();
+
+                command = new MySqlCommand {
+                    Connection = databaseConnection.Connection,
+                    CommandText = "DELETE FROM caycanh WHERE ID = @id;"
+                };
+                command.Parameters.AddWithValue("@id", idCay);
                 command.ExecuteNonQuery();
                 command.Dispose();
 

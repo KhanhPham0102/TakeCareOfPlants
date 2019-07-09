@@ -25,8 +25,8 @@
           <DataField>Vật_Tư</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Số_Lượng">
-          <DataField>Số_Lượng</DataField>
+        <Field Name="Số_Phiếu_Mua">
+          <DataField>Số_Phiếu_Mua</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Tổng_Giá_Trị">
@@ -166,7 +166,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Số Lượng</Value>
+                                  <Value>Số Phiếu Mua</Value>
                                   <Style>
                                     <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -355,14 +355,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Số_Lượng">
+                        <Textbox Name="Số_Phiếu_Mua">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Số_Lượng.Value</Value>
+                                  <Value>=Fields!Số_Phiếu_Mua.Value</Value>
                                   <Style>
                                     <FontWeight>Normal</FontWeight>
                                     <Color>#333333</Color>
@@ -372,7 +372,7 @@
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Số_Lượng</rd:DefaultName>
+                          <rd:DefaultName>Số_Phiếu_Mua</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>

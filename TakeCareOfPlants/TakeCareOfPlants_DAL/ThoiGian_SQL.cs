@@ -84,5 +84,34 @@ namespace TakeCareOfPlants_DAL
                 throw ex;
             }
         }
+
+        public void DeleteDataThoiGian(string idThoiGian)
+        {
+            try {
+                databaseConnection.OpenConnect();
+
+                command = new MySqlCommand {
+                    Connection = databaseConnection.Connection,
+                    CommandText = "DELETE FROM lich_thoigian_caycanh WHERE IDThoiGian = @idtg;"
+                };
+                command.Parameters.AddWithValue("@idtg", idThoiGian);
+                command.ExecuteNonQuery();
+                command.Dispose();
+
+                command = new MySqlCommand {
+                    Connection = databaseConnection.Connection,
+                    CommandText = "DELETE FROM lich_thoigian_vattu WHERE IDThoiGian = @idtg;"
+                };
+                command.Parameters.AddWithValue("@idtg", idThoiGian);
+                command.ExecuteNonQuery();
+                command.Dispose();
+
+                databaseConnection.CloseConnect();
+            } catch (Exception ex) {
+                command.Dispose();
+                databaseConnection.CloseConnect();
+                throw ex;
+            }
+        }
     }
 }

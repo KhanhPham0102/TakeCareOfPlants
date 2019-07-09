@@ -25,7 +25,8 @@ namespace TakeCareOfPlants_DAL
                 reader = command.ExecuteReader();
                 if (reader.HasRows) {
                     while (reader.Read()) {
-                        donVi_DTOs.Add(new DonVi_DTO(reader.GetString("ID"), reader.GetString("DonVi")));
+                        donVi_DTOs.Add(new DonVi_DTO(id: reader.GetString("ID"),
+                                                     donVi: reader.GetString("DonVi")));
                     }
                 }
                 reader.Close();

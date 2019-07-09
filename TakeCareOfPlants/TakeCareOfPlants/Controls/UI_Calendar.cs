@@ -65,10 +65,8 @@ namespace TakeCareOfPlants
                     DescriptionText = tuple.Item2.DonVi
                 });
 
-                if (ListVatTu == null) {
-                    ListVatTu.Add(new Tuple<string, int>(item1: tuple.Item1.Id,
+                ListVatTu.Add(new Tuple<string, int>(item1: tuple.Item1.Id,
                                                      item2: 0));
-                }
             }
         }
 
@@ -155,12 +153,12 @@ namespace TakeCareOfPlants
                 Note_Text.Text
             );
 
-            if (Material_DropDown.SelectedIndex == -1) {
+            if (Material_DropDown.CheckedItems.Count == 0) {
                 isSuccess = false;
                 Material_DropDown.DropDownListElement.ArrowButton.Fill.BackColor2 = Color.FromArgb(255, 0, 4);
             }
 
-            if (PlantName_DropDown.SelectedIndex == -1) {
+            if (PlantName_DropDown.CheckedItems.Count == 0) {
                 isSuccess = false;
                 PlantName_DropDown.DropDownListElement.ArrowButton.Fill.BackColor2 = Color.FromArgb(255, 0, 4);
             }
@@ -273,6 +271,15 @@ namespace TakeCareOfPlants
             }
 
             customDataGrid[column, row].Value = db.Items[0];
+        }
+
+        private void Delete_Button_Click(object sender, EventArgs e)
+        {
+            try {
+
+            } catch(Exception ex) {
+                Function_GUI.ShowErrorDialog(ex.Message);
+            }
         }
     }
 }

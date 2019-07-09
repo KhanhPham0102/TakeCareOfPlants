@@ -105,6 +105,7 @@
             this.Back_Button.TabIndex = 0;
             this.Back_Button.TabStop = false;
             this.Back_Button.Zoom = 10;
+            this.Back_Button.Click += new System.EventHandler(this.Back_Button_Click);
             // 
             // Mini_Windows
             // 

@@ -82,7 +82,7 @@ namespace TakeCareOfPlants_DAL
                 "SELECT "
                     + "ROW_NUMBER() OVER() AS 'STT', "
                     + "sd.tenVatTu AS 'Vật_Tư', "
-                    + "tc._count AS 'Số_Lượng', "
+                    + "tc._count AS 'Số_Phiếu_Mua', "
                     + "tc._cost AS 'Tổng_Giá_Trị', "
                     + "(sd._number / tc._number) * 100 AS 'Tỉ_Lệ' "
                 + "FROM( "
@@ -102,7 +102,7 @@ namespace TakeCareOfPlants_DAL
                     + "SELECT "
                         + "vt.ID AS id, "
                         + "vt.VatTu AS tenVatTu, "
-                        + "COUNT(vt_mvt.IDVatTu) AS _count, "
+                        + "COUNT(vt_mvt.IDMuaVatTu) AS _count, "
                         + "SUM(vt_mvt.SoTien) AS _cost, "
                         + "SUM(vt_mvt.SoLuong) AS _number "
                     + "FROM vattu AS vt "
@@ -110,6 +110,7 @@ namespace TakeCareOfPlants_DAL
                     + "ON vt_mvt.IDVatTu = vt.ID "
                     + "INNER JOIN muavattu AS mvt "
                     + "ON vt_mvt.IDMuaVatTu = mvt.ID "
+                    + "WHERE MONTH(mvt.NgayMua) = '" + month + "' "
                     + "GROUP BY vt.ID "
                 + ") tc ON sd.id = tc.id;",
                 databaseConnection.Connection);

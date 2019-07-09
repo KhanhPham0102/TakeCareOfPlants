@@ -193,5 +193,45 @@ namespace TakeCareOfPlants
         {
             Status_ComboBox.ForeColor = Color.Black;
         }
+
+        private void Update_Button_Click(object sender, EventArgs e)
+        {
+            try {
+                cayCanhBUS.UpdateValueCayCanhWithId(
+                    listIDCayCanh[List_Plant_DataGrid.CurrentRow.Index + 1],
+                    Name_Plant_Text.Text,
+                    GlobalVariable_DTO.ViTri_DTOs[Planting_Location_ComboBox.selectedIndex - 1].Id,
+                    listIDLoai[Type_Of_Plant_ComboBox.selectedIndex - 1],
+                    listIDTinhTrang[Status_ComboBox.selectedIndex - 1],
+                    Planing_Data_DateTime.Value);
+
+                List_Plant_DataGrid.CurrentRow.Cells[1].Value = Name_Plant_Text.Text;
+                List_Plant_DataGrid.CurrentRow.Cells[2].Value = Type_Of_Plant_ComboBox.selectedValue;
+                List_Plant_DataGrid.CurrentRow.Cells[3].Value =
+                    GlobalVariable_DTO.ViTri_DTOs[Planting_Location_ComboBox.selectedIndex - 1].TenViTri;
+                List_Plant_DataGrid.CurrentRow.Cells[4].Value = Status_ComboBox.selectedValue;
+                List_Plant_DataGrid.CurrentRow.Cells[5].Value = Planing_Data_DateTime.Value.ToString("dd-MM-yyyy");
+
+                Function_GUI.SetImageNotifiAsync(true, "Create");
+            } catch (Exception ex) {
+                Function_GUI.ShowErrorDialog(ex.Message);
+            }
+        }
+
+        private void Delete_Button_Click(object sender, EventArgs e)
+        {
+            try {
+                cayCanhBUS.DeleteValueCayCanh(listIDCayCanh[List_Plant_DataGrid.CurrentRow.Index + 1]);
+
+                foreach (DataGridViewRow item in List_Plant_DataGrid.SelectedRows) {
+                    listIDCayCanh.Remove(item.Index + 1);
+                    List_Plant_DataGrid.Rows.RemoveAt(item.Index);
+                }
+
+                Function_GUI.SetImageNotifiAsync(true, "Create");
+            } catch (Exception ex) {
+                Function_GUI.ShowErrorDialog(ex.Message);
+            }
+        }
     }
 }

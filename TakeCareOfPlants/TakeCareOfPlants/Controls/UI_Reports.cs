@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TakeCareOfPlants.Forms;
+using TakeCareOfPlants.Reports;
 
 namespace TakeCareOfPlants
 {
@@ -27,6 +22,28 @@ namespace TakeCareOfPlants
                 }
                 return uiReports;
             }
+        }
+
+        private void ListPlant_ImageButton_Click(object sender, EventArgs e)
+        {
+            ListPlant_GUI.Instance.ShowDialog();
+        }
+
+        private void ReportCost_ImageButton_Click(object sender, EventArgs e)
+        {
+            ReportCostVsStatus_GUI.Instance.ShowDialog();
+            ReportCostVsStatus_GUI.Instance.IsCostOrStatus = true;
+        }
+
+        private void ListCalendar_ImageButton_Click(object sender, EventArgs e)
+        {
+            ListCalendar_GUI.Instance.ShowDialog();
+        }
+
+        private void ReportStatus_ImageButton_Click(object sender, EventArgs e)
+        {
+            ReportCostVsStatus_GUI.Instance.ShowDialog();
+            ReportCostVsStatus_GUI.Instance.IsCostOrStatus = false;
         }
     }
 }

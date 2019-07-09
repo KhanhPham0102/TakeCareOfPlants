@@ -28,11 +28,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Material_Title = new System.Windows.Forms.Label();
             this.Time_Title = new System.Windows.Forms.Label();
             this.Note_Title = new System.Windows.Forms.Label();
@@ -58,6 +58,8 @@
             this.object_58c7e8de_d9c3_4e5f_8d4b_c920b045c9fb = new Telerik.WinControls.UI.RadDropDownListRootElement();
             this.object_e72eab59_cf89_4488_90ad_be547ab79041 = new Telerik.WinControls.RootRadElement();
             this.Note_Text = new Bunifu.Framework.BunifuCustomTextbox();
+            this.Delete_Button = new System.Windows.Forms.Button();
+            this.Delete_Button_Elipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.List_Time_DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlantName_DropDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Material_DropDown)).BeginInit();
@@ -107,8 +109,8 @@
             // 
             this.List_Time_DataGrid.AllowUserToAddRows = false;
             this.List_Time_DataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.List_Time_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.List_Time_DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.List_Time_DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.List_Time_DataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -117,14 +119,14 @@
             this.List_Time_DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.List_Time_DataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.List_Time_DataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.List_Time_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.List_Time_DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.List_Time_DataGrid.ColumnHeadersHeight = 30;
             this.List_Time_DataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -133,14 +135,14 @@
             this.Unit,
             this.Amount,
             this.Note});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.List_Time_DataGrid.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.List_Time_DataGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.List_Time_DataGrid.DoubleBuffered = true;
             this.List_Time_DataGrid.EnableHeadersVisualStyles = false;
             this.List_Time_DataGrid.HeaderBgColor = System.Drawing.Color.DeepSkyBlue;
@@ -150,14 +152,14 @@
             this.List_Time_DataGrid.MultiSelect = false;
             this.List_Time_DataGrid.Name = "List_Time_DataGrid";
             this.List_Time_DataGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.Turquoise;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.List_Time_DataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Turquoise;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.List_Time_DataGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.List_Time_DataGrid.RowHeadersVisible = false;
             this.List_Time_DataGrid.RowHeadersWidth = 51;
             this.List_Time_DataGrid.RowTemplate.DividerHeight = 1;
@@ -173,8 +175,8 @@
             // STT
             // 
             this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.STT.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.STT.DefaultCellStyle = dataGridViewCellStyle3;
             this.STT.FillWeight = 30F;
             this.STT.Frozen = true;
             this.STT.HeaderText = "STT";
@@ -420,7 +422,7 @@
             this.Time_Pick.TabIndex = 0;
             this.Time_Pick.TabStop = false;
             this.Time_Pick.TimeTables = Telerik.WinControls.UI.TimeTables.HoursAndMinutesInOneTable;
-            this.Time_Pick.Value = new System.DateTime(2019, 7, 5, 4, 23, 0, 0);
+            this.Time_Pick.Value = new System.DateTime(2019, 7, 6, 4, 23, 0, 0);
             ((Telerik.WinControls.UI.RadTimePickerElement)(this.Time_Pick.GetChildAt(0))).Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             ((Telerik.WinControls.UI.RadTimePickerElement)(this.Time_Pick.GetChildAt(0))).Alignment = System.Drawing.ContentAlignment.MiddleCenter;
             ((Telerik.WinControls.Primitives.FillPrimitive)(this.Time_Pick.GetChildAt(0).GetChildAt(0))).Alignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -457,11 +459,36 @@
             this.Note_Text.Size = new System.Drawing.Size(356, 212);
             this.Note_Text.TabIndex = 2;
             // 
+            // Delete_Button
+            // 
+            this.Delete_Button.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Delete_Button.BackColor = System.Drawing.Color.RoyalBlue;
+            this.Delete_Button.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Delete_Button.FlatAppearance.BorderSize = 0;
+            this.Delete_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Delete_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.Delete_Button.ForeColor = System.Drawing.Color.White;
+            this.Delete_Button.Location = new System.Drawing.Point(714, 511);
+            this.Delete_Button.Name = "Delete_Button";
+            this.Delete_Button.Size = new System.Drawing.Size(173, 45);
+            this.Delete_Button.TabIndex = 36;
+            this.Delete_Button.TabStop = false;
+            this.Delete_Button.Text = "Delete Time";
+            this.Delete_Button.UseVisualStyleBackColor = false;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
+            // 
+            // Delete_Button_Elipse
+            // 
+            this.Delete_Button_Elipse.ElipseRadius = 20;
+            this.Delete_Button_Elipse.TargetControl = this.Delete_Button;
+            // 
             // UI_Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.Delete_Button);
             this.Controls.Add(this.Time_Pick);
             this.Controls.Add(this.Material_DropDown);
             this.Controls.Add(this.Clear_Button);
@@ -512,5 +539,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewTextBoxColumn Note;
+        private System.Windows.Forms.Button Delete_Button;
+        private Bunifu.Framework.UI.BunifuElipse Delete_Button_Elipse;
     }
 }

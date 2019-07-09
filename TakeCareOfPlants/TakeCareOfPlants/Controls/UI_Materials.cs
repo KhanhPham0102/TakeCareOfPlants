@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Globalization;
 using System.Reflection;
 using System.Windows.Forms;
 using TakeCareOfPlants_BUS;
@@ -11,8 +13,8 @@ namespace TakeCareOfPlants
     public partial class UI_Materials : UserControl
     {
         private static UI_Materials uiMaterials;
-        private VatTu_BUS vatTuBUS = new VatTu_BUS();
-        private DateTimePicker dtp = new DateTimePicker();
+        private readonly VatTu_BUS vatTuBUS = new VatTu_BUS();
+        private readonly DateTimePicker dtp = new DateTimePicker();
 
         private Rectangle Rectangle { get; set; }
         private TextBox Tb { get; set; }
@@ -91,6 +93,7 @@ namespace TakeCareOfPlants
                 case 1:
                     e.Control.KeyPress -= Amount_KeyPress;
                     e.Control.KeyPress -= Money_KeyPress;
+                    e.Control.KeyPress -= Material_KeyPress;
 
                     TbUnit = (TextBox)e.Control;
                     AutoCompleteStringCollection autoCompleteUnit = new AutoCompleteStringCollection();
@@ -153,12 +156,30 @@ namespace TakeCareOfPlants
 
         private void Create_Button_Click(object sender, EventArgs e)
         {
-            //List<List<>>
-            foreach (DataGridViewRow row in Coupon_DataGrid.Rows) {
-                foreach (DataGridViewCell cell in row.Cells) {
-                    string value = cell.Value.ToString();
+            List<Tuple<string, string, MuaVatTu_DTO>> tuples = 
+                new List<Tuple<string, string, MuaVatTu_DTO>>();
 
+            foreach (DataGridViewRow row in Coupon_DataGrid.Rows) {
+                if (row.Index == Coupon_DataGrid.Rows.Count - 1) {
+                    break;
                 }
+                tuples.Add(
+                    new Tuple<string, string, MuaVatTu_DTO>(
+                        row.Cells[0].Value.ToString(),
+                        row.Cells[1].Value.ToString(),
+                        new MuaVatTu_DTO(diaChi: row.Cells[2].Value.ToString(),
+                                         ngayMua: Convert.ToDateTime(row.Cells[3].Value.ToString()),
+                                         soLuong: int.Parse(row.Cells[4].Value.ToString()),
+                                         soTien: (long)decimal.Parse(s: row.Cells[5].Value.ToString(), style: NumberStyles.Currency))
+                    ));
+            }
+
+            try {
+                vatTuBUS.InsertValuePhieuMuaVatTu(tuples);
+
+                Function_GUI.SetImageNotifiAsync(true, "Create");
+            } catch(Exception ex) {
+                Function_GUI.ShowErrorDialog(ex.Message);
             }
         }
 

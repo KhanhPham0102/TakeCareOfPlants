@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Bunifu.Framework.UI;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using TakeCareOfPlants_BUS;
@@ -52,12 +53,11 @@ namespace TakeCareOfPlants
             set => Panel_Center_Controller = value;
         }
 
-        public Button BackButton
+        public BunifuImageButton BackButton
         {
-            get => null;
+            get => Back_Button;
 
-            set {
-            }
+            set => Back_Button = value;
         }
 
         public Label TitlePage
@@ -70,6 +70,8 @@ namespace TakeCareOfPlants
         private void PageMain_GUI_Load(object sender, EventArgs e)
         {
             pageMain = this;
+
+            BackButton.Visible = false;
 
             ImageNotification.InitialImage = Properties.Resources._running;
             ImageNotification.Image = ImageNotification.InitialImage;
@@ -165,6 +167,11 @@ namespace TakeCareOfPlants
             DateTime_Title.Text = DateTime.Now.ToLongTimeString();
             DateTime_Title.ForeColor = Color.White;
             TimeInc.Start();
+        }
+
+        private void Back_Button_Click(object sender, EventArgs e)
+        {
+            TitleClick("Plant Care", UI_Care.Instance);
         }
 
         protected override CreateParams CreateParams

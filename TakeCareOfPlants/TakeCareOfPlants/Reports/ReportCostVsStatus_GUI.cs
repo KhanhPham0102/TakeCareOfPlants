@@ -25,7 +25,6 @@ namespace TakeCareOfPlants.Reports
 
         public ReportCostVsStatus_GUI()
         {
-            IsCostOrStatus = false;
             InitializeComponent();
         }
 
