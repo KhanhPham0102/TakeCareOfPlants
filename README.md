@@ -11,7 +11,7 @@
     - .NET Standard 2.0
     - .NET Framework 4.7.2
  - Bunifu: version 1.9.0.1 [Bunifu](https://bunifuframework.com/products/bunifu-ui-winforms/)
- - Telerik: version 2019.1.115 
+ - Telerik: version 2019.1.115 [Telerik](https://www.telerik.com/products/winforms.aspx)
  - Microsoft Report: version 15.3.1
  - MySQL: version 8.0.16
     - MySQL Server 8.0.16
