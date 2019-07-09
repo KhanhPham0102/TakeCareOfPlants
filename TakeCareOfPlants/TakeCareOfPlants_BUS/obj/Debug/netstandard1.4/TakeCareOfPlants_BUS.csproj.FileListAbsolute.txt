@@ -1,0 +1,5 @@
+C:\Nhap Mon Cong Nghe Phan Men\Project\Project2019\TakeCareOfPlants\TakeCareOfPlants_BUS\bin\Debug\netstandard1.4\TakeCareOfPlants_BUS.deps.json
+C:\Nhap Mon Cong Nghe Phan Men\Project\Project2019\TakeCareOfPlants\TakeCareOfPlants_BUS\bin\Debug\netstandard1.4\TakeCareOfPlants_BUS.dll
+C:\Nhap Mon Cong Nghe Phan Men\Project\Project2019\TakeCareOfPlants\TakeCareOfPlants_BUS\obj\Debug\netstandard1.4\TakeCareOfPlants_BUS.csprojAssemblyReference.cache
+C:\Nhap Mon Cong Nghe Phan Men\Project\Project2019\TakeCareOfPlants\TakeCareOfPlants_BUS\obj\Debug\netstandard1.4\TakeCareOfPlants_BUS.csproj.CoreCompileInputs.cache
+C:\Nhap Mon Cong Nghe Phan Men\Project\Project2019\TakeCareOfPlants\TakeCareOfPlants_BUS\obj\Debug\netstandard1.4\TakeCareOfPlants_BUS.AssemblyInfo.cs
